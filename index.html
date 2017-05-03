@@ -7,26 +7,29 @@
 	<body>
 
 		<form class="js-sort-wrap">
-			<select class="js-filter" data-default-sort="lastname">
+			<select class="js-filter" data-default-filter="">
 				<option data-sort-values="firstname" value="filter-1">Filter 1</option>
 				<option data-sort-values="age" value="filter-2">Filter 2</option>
 				<option data-sort-values="lastname,position" value="filter-3">Filter 3</option>
 			</select>
-			<select class="js-sort" data-default-sort="lastname">
+			<select class="js-sort" data-default-sort="squadnumber">
+				<option data-sort-direction="ascending" selected value="squadnumber">Number</option>
+				<option data-sort-direction="ascending" value="lastname">Last name</option>
 				<option data-sort-direction="ascending" value="firstname">First name</option>
-				<option data-sort-direction="ascending" selected value="lastname">Last name</option>
-				<option data-sort-direction="descending" value="age">Age</option>
+				<!-- <option data-sort-direction="descending" value="age">Age</option> -->
 				<option data-sort-direction="ascending" value="position">Position</option>
+				<option data-sort-direction="ascending" value="nationality">Nationality</option>
 			</select>
 		</form>
 
 		<table>
 			<thead>
 				<tr>
+					<th id="squadnumber">Number</th>
 					<th id="lastname">Last name</th>
 					<th id="firstname">First name</th>
-					<th id="age">Age</th>
 					<th id="position">Position</th>
+					<th id="nationality">Nationality</th>
 				</tr>
 			</thead>
 			<tbody class="js-data-body">
