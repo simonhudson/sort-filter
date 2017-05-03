@@ -223,8 +223,6 @@ const data = [
     }
 ];
 
-let currentData;
-
 const renderData = (dataToRender = data) => {
 	const dataEl = document.querySelector('.js-data-body');
 	dataEl.innerHTML = '';
@@ -240,14 +238,15 @@ const renderData = (dataToRender = data) => {
 		}
 		dataEl.appendChild(row);
 	});
-	currentData = dataToRender;
 };
 
 const sortValues = (sortBy, isDescending) => {
-	console.log(`sortBy: ${sortBy}`);
-	console.log(`isDescending: ${isDescending}`);
 	return data.sort(function(a, b) {
-		return isDescending ? (a[sortBy] < b[sortBy]) : (a[sortBy] > b[sortBy]);
+		if (typeof a[sortBy] === 'number' && typeof b[sortBy] === 'number') {
+			return a[sortBy] - b[sortBy];
+		} else {
+			return a[sortBy] > b[sortBy];
+		}
 	});
 };
 
