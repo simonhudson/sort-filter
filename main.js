@@ -61,8 +61,9 @@ const doFilter = () => {
 	if (!filterEl) return;
 };
 
-const doSort = (sortByDefault) => {
+const doSort = (sortByDefault, evt) => {
 	if (!sortEl) return;
+	console.log(evt);
 	sortByDefault = (sortByDefault === true);
 	const defaultSort = sortEl.dataset.defaultSort;
 	const selected = sortByDefault ? defaultSort : sortEl.options[sortEl.selectedIndex];
