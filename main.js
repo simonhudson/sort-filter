@@ -61,16 +61,15 @@ const doFilter = () => {
 	if (!filterEl) return;
 };
 
-const doSort = (sortByDefault = false) => {
+const doSort = (sortByDefault) => {
 	if (!sortEl) return;
-	console.log('doSort');
+	sortByDefault = (sortByDefault === true);
 	const defaultSort = sortEl.dataset.defaultSort;
-	const selected = sortByDefault ? defaultSort : sortEl.options[sortEl.selectedIndex].value;
+	const selected = sortByDefault ? defaultSort : sortEl.options[sortEl.selectedIndex];
+	const sortBy = sortByDefault ? defaultSort : selected.value;
 	const direction = sortByDefault ? sortEl.querySelector(`[data-sort-direction]`) : selected.dataset.sortDirection;
 	const isDescending = direction === 'descending';
-	console.log(selected);
-	const sorted = sortValues(selected.value, isDescending);
-	console.table(sorted);
+	const sorted = sortValues(sortBy, isDescending);
 	renderData(sorted);
 };
 
