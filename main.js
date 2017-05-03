@@ -241,11 +241,11 @@ const renderData = (dataToRender = data) => {
 };
 
 const sortValues = (sortBy, isDescending) => {
-	return data.sort(function(a, b) {
+	return data.sort( (a, b) => {
 		if (typeof a[sortBy] === 'number' && typeof b[sortBy] === 'number') {
 			return a[sortBy] - b[sortBy];
 		} else {
-			return a[sortBy] > b[sortBy];
+			return isDescending ? a[sortBy] < b[sortBy] : a[sortBy] > b[sortBy];
 		}
 	});
 };
