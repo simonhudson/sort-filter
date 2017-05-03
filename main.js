@@ -272,13 +272,25 @@ const renderData = (dataToRender = data) => {
 };
 
 const sortValues = (sortBy, isDescending) => {
+	console.log(`sortBy: ${sortBy}`);
+	console.log(`isDescending: ${isDescending}`);
 	return data.sort(function(a, b) {
 		return isDescending ? (a[sortBy] < b[sortBy]) : (a[sortBy] > b[sortBy]);
 	});
 };
 
+const filterValues = (filterBy, filterValue) => {
+	if (filterValue === 'All') return;
+	return data.filter(item => item[filterBy] === filterValue);
+};
+
 const doFilter = () => {
 	if (!filterEl) return;
+	const selected = filterEl.options[filterEl.selectedIndex];
+	const filterBy = selected.value;
+	const filterValue = selected.textContent;
+	const filtered = filterValues(filterBy, filterValue);
+	renderData(filtered);
 };
 
 const doSort = (sortByDefault, evt) => {
@@ -287,8 +299,7 @@ const doSort = (sortByDefault, evt) => {
 	const defaultSort = sortEl.dataset.defaultSort;
 	const selected = sortByDefault ? defaultSort : sortEl.options[sortEl.selectedIndex];
 	const sortBy = sortByDefault ? defaultSort : selected.value;
-	console.log(`sortBy: ${sortBy}`);
-	const direction = sortByDefault ? sortEl.querySelector(`[data-sort-direction]`) : selected.dataset.sortDirection;
+	const direction = sortByDefault ? sortEl.querySelector(`[data-default-sort-direction]`) : selected.dataset.sortDirection;
 	const isDescending = direction === 'descending';
 	const sorted = sortValues(sortBy, isDescending);
 	renderData(sorted);
