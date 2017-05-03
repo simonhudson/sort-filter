@@ -5,7 +5,6 @@ const filterEl = document.querySelector('.js-filter');
 
 const data = [
 	{
-        "id": 1,
         "squadnumber": 1,
         "lastname": "Grant",
         "firstname": "Lee",
@@ -13,7 +12,6 @@ const data = [
         "nationality": "English"
     },
     {
-        "id": 2,
         "squadnumber": 2,
         "lastname": "Christie",
         "firstname": "Cyrus",
@@ -21,7 +19,6 @@ const data = [
         "nationality": "Irish"
     },
     {
-        "id": 3,
         "squadnumber": 3,
         "lastname": "Forsyth",
         "firstname": "Craig",
@@ -29,7 +26,6 @@ const data = [
         "nationality": "Scottish"
     },
     {
-        "id": 4,
         "squadnumber": 4,
         "lastname": "Bryson",
         "firstname": "Craig",
@@ -37,7 +33,6 @@ const data = [
         "nationality": "Scottish"
     },
     {
-        "id": 5,
         "squadnumber": 5,
         "lastname": "Buxton",
         "firstname": "Jake",
@@ -45,7 +40,6 @@ const data = [
         "nationality": "English"
     },
     {
-        "id": 6,
         "squadnumber": 6,
         "lastname": "Keogh",
         "firstname": "Richard",
@@ -53,7 +47,6 @@ const data = [
         "nationality": "Irish"
     },
     {
-        "id": 8,
         "squadnumber": 8,
         "lastname": "Hendrick",
         "firstname": "Jeff",
@@ -61,7 +54,6 @@ const data = [
         "nationality": "Irish"
     },
     {
-        "id": 9,
         "squadnumber": 9,
         "lastname": "Martin",
         "firstname": "Chris",
@@ -69,7 +61,6 @@ const data = [
         "nationality": "Scottish"
     },
     {
-        "id": 10,
         "squadnumber": 10,
         "lastname": "Bent",
         "firstname": "Darren",
@@ -77,7 +68,6 @@ const data = [
         "nationality": "English"
     },
     {
-        "id": 11,
         "squadnumber": 11,
         "lastname": "Russell",
         "firstname": "Johnny",
@@ -85,7 +75,6 @@ const data = [
         "nationality": "Scottish"
     },
     {
-        "id": 12,
         "squadnumber": 12,
         "lastname": "Baird",
         "firstname": "Chris",
@@ -93,7 +82,6 @@ const data = [
         "nationality": "Northern Irish"
     },
     {
-        "id": 14,
         "squadnumber": 14,
         "lastname": "Shackell",
         "firstname": "Jason",
@@ -101,7 +89,6 @@ const data = [
         "nationality": "English"
     },
     {
-        "id": 15,
         "squadnumber": 15,
         "lastname": "Johnson",
         "firstname": "Bradley",
@@ -109,7 +96,6 @@ const data = [
         "nationality": "English"
     },
     {
-        "id": 16,
         "squadnumber": 16,
         "lastname": "Pearce",
         "firstname": "Alex",
@@ -117,7 +103,6 @@ const data = [
         "nationality": "Irish"
     },
     {
-        "id": 17,
         "squadnumber": 17,
         "lastname": "Carson",
         "firstname": "Scott",
@@ -125,7 +110,6 @@ const data = [
         "nationality": "English"
     },
     {
-        "id": 18,
         "squadnumber": 18,
         "lastname": "Butterfield",
         "firstname": "Jacob",
@@ -133,7 +117,6 @@ const data = [
         "nationality": "English"
     },
     {
-        "id": 19,
         "squadnumber": 19,
         "lastname": "Hughes",
         "firstname": "Will",
@@ -141,7 +124,6 @@ const data = [
         "nationality": "Northern Irish"
     },
     {
-        "id": 20,
         "squadnumber": 20,
         "lastname": "Camara",
         "firstname": "Abdoul",
@@ -149,7 +131,6 @@ const data = [
         "nationality": "Guinean"
     },
     {
-        "id": 21,
         "squadnumber": 21,
         "lastname": "Roos",
         "firstname": "Kelle",
@@ -157,7 +138,6 @@ const data = [
         "nationality": "Dutch"
     },
     {
-        "id": 22,
         "squadnumber": 22,
         "lastname": "Blackman",
         "firstname": "Nick",
@@ -165,7 +145,6 @@ const data = [
         "nationality": "English"
     },
     {
-        "id": 23,
         "squadnumber": 23,
         "lastname": "Ince",
         "firstname": "Tom",
@@ -173,7 +152,6 @@ const data = [
         "nationality": "English"
     },
     {
-        "id": 24,
         "squadnumber": 24,
         "lastname": "Weimann",
         "firstname": "Andreas",
@@ -181,7 +159,6 @@ const data = [
         "nationality": "Austrian"
     },
     {
-        "id": 26,
         "squadnumber": 26,
         "lastname": "Hanson",
         "firstname": "Jamie",
@@ -189,7 +166,6 @@ const data = [
         "nationality": "English"
     },
     {
-        "id": 27,
         "squadnumber": 27,
         "lastname": "Calero",
         "firstname": "Ivan",
@@ -197,7 +173,6 @@ const data = [
         "nationality": "Spanish"
     },
     {
-        "id": 30,
         "squadnumber": 30,
         "lastname": "Ssewankambo",
         "firstname": "Isak",
@@ -205,7 +180,6 @@ const data = [
         "nationality": "Swedish"
     },
     {
-        "id": 31,
         "squadnumber": 31,
         "lastname": "Lowe",
         "firstname": "Max",
@@ -213,7 +187,6 @@ const data = [
         "nationality": "English"
     },
     {
-        "id": 32,
         "squadnumber": 32,
         "lastname": "Shotton",
         "firstname": "Ryan",
@@ -221,7 +194,6 @@ const data = [
         "nationality": "English"
     },
     {
-        "id": 34,
         "squadnumber": 34,
         "lastname": "Thorne",
         "firstname": "George",
@@ -229,7 +201,6 @@ const data = [
         "nationality": "English"
     },
     {
-        "id": 35,
         "squadnumber": 35,
         "lastname": "Mitchell",
         "firstname": "Jonathan",
@@ -237,7 +208,6 @@ const data = [
         "nationality": "English"
     },
     {
-        "id": 37,
         "squadnumber": 37,
         "lastname": "Warnock",
         "firstname": "Stephen",
@@ -245,7 +215,6 @@ const data = [
         "nationality": "English"
     },
     {
-        "id": 38,
         "squadnumber": 38,
         "lastname": "Bennett",
         "firstname": "Mason",
@@ -253,6 +222,8 @@ const data = [
         "nationality": "English"
     }
 ];
+
+let currentData;
 
 const renderData = (dataToRender = data) => {
 	const dataEl = document.querySelector('.js-data-body');
@@ -269,6 +240,7 @@ const renderData = (dataToRender = data) => {
 		}
 		dataEl.appendChild(row);
 	});
+	currentData = dataToRender;
 };
 
 const sortValues = (sortBy, isDescending) => {
