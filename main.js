@@ -121,7 +121,7 @@ const data = [
         "lastname": "Hughes",
         "firstname": "Will",
         "position": "Midfielder",
-        "nationality": "Northern Irish"
+        "nationality": "English"
     },
     {
         "squadnumber": 20,
@@ -224,6 +224,7 @@ const data = [
 ];
 
 const renderData = (dataToRender = data) => {
+	console.table(dataToRender);
 	const dataEl = document.querySelector('.js-data-body');
 	dataEl.innerHTML = '';
 	dataToRender.forEach(item => {
@@ -241,13 +242,20 @@ const renderData = (dataToRender = data) => {
 };
 
 const sortValues = (sortBy, isDescending) => {
-	return data.sort( (a, b) => {
+
+	const arr = [];
+	for (let key in data) {
+		arr.push(data[key]);
+	}
+
+	return arr.sort( (a, b) => {
 		if (typeof a[sortBy] === 'number' && typeof b[sortBy] === 'number') {
 			return a[sortBy] - b[sortBy];
 		} else {
 			return isDescending ? a[sortBy] < b[sortBy] : a[sortBy] > b[sortBy];
 		}
 	});
+
 };
 
 const filterValues = (filterBy, filterValue) => {
